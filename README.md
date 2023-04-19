@@ -73,6 +73,15 @@ o_fed = folium.GeoJson(
     zoom_on_click=True
 )
 
+# GROUP OKN FEATURES
+OKN_all = folium.FeatureGroup(name='Объекты культурного наследия')
+o_fed.add_to(OKN_all)
+o_reg.add_to(OKN_all)
+o_mun.add_to(OKN_all)
+o_fin.add_to(OKN_all)
+o_cgf.add_to(OKN_all)
+OKN_all.add_to(m)
+
 ```
 
 **- создать информативный веб-сайт, отражающий многочисленные характеристики объектов ОКН**
