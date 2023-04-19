@@ -58,6 +58,21 @@ o_municip = okn.loc[okn['Тип'] == 'ОКН муниципальный']
 o_find = okn.loc[okn['Тип'] == 'ОКН выявленный']
 o_cgfo = okn.loc[okn['Тип'] == 'ИЦГФО']
 
+# ADD OKN POLYGONS
+o_fed = folium.GeoJson(
+    o_federal,
+    name='ОКН Федерального значения',
+    tooltip=folium.GeoJsonTooltip(fields=['Наименование']),
+    popup=folium.GeoJsonPopup(fields=['Адрес', 'Наименование', 'Тип', 'Владелец',
+                                      'Дата возникновения', 'Назначение', 'Состояние']),
+    style_function=lambda x: {
+        "fillColor": '#63031d',
+        "weight": 0.1,
+        "fillOpacity": 0.7,
+    },
+    zoom_on_click=True
+)
+
 ```
 
 **- создать информативный веб-сайт, отражающий многочисленные характеристики объектов ОКН**
