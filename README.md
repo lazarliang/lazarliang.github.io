@@ -25,6 +25,14 @@ https://lazarliang.github.io/
 Получилось:
 - добавить легенду для обозначений ОКН
 
+folium.plugins.FloatImage(
+    image='https://i.ibb.co/njtKPzn/city-boundary.png',
+    bottom=12,
+    left=0.75,
+    width='225px',
+    height='30px'
+).add_to(m)
+
 - настроить категоризацию зданий по цветам в зависимости от типа
 
 - создать информативный веб-сайт, отражающий многочисленное характеристики объектов ОКН
